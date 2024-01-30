@@ -51,7 +51,7 @@ or a name and a tag of the model you want to use, for instance:
 
 For the comlete list of models see: https://ollama.ai/library
 
-Each model listed there has its own tag list, with all available version (in different sizes and for different putposes), 
+Each model listed there has its own tag list, with all available versions (in different sizes and for different purposes), 
 for instance: https://ollama.ai/library/llama2/tags
 
 ## How to use Ollama locally from CLI?
