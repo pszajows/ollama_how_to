@@ -97,4 +97,11 @@ Next I modified the file */etc/nginx/sites-available/default* - the server secti
 		}
 	}
 
-After such modification it was possible to call Ollama server from other host using port 80. 
+After such modification it was possible to call Ollama server from other host using port 80, for 
+example using command:
+
+	curl http://<local_IP_of_Raspberry_Pi>/api/generate -d '{
+  		"model": "llama2",
+  		"prompt": "Why is the sky blue?",
+  		"stream": false
+	}'
