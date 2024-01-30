@@ -35,7 +35,9 @@ Example setup for running Ollama locally:
 To start Ollama server in WSL you can use the shell script *start_ollama.sh* from this repository. 
 Make its copy in your home folder, change its attributes to make it runnable:
 > chmod 777 start_ollama.sh
+
 and start it in background:
+
 > ./start_ollama.sh &
 
 ## How to download a model to Ollama?
