@@ -43,8 +43,9 @@ and start it in background:
 ## How to download a model to Ollama?
 
 Ollama has its own model cache, which is populated automatically when a specific model version is invoked (see below).
-Sometimes it is convenient to trigger populating the cache manually, e.g. when you want to download several models
-for the future use running a batch. In order to do it, you can use *ollama pull* command with a name 
+Sometimes it is convenient to trigger populating the cache manually, 
+e.g. when you want to download several models for the future use with API. 
+In order to do it, you can use *ollama pull* command with a name 
 or a name and a tag of the model you want to use, for instance:
 > ollama pull starcoder
 
