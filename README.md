@@ -86,13 +86,13 @@ To install  it in Raspberry Pi OS I used the following command:
 
 Next I modified the file */etc/nginx/sites-available/default* - the server section after modification follows:
 
-server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-        server_name _;
-
-        location / {
-                proxy_pass http://127.0.0.1:11434;
-                proxy_set_header Host $host;
+	server {
+        	listen 80 default_server;
+        	listen [::]:80 default_server;
+        	server_name _;
+	
+        	location / {
+                	proxy_pass http://127.0.0.1:11434;
+                	proxy_set_header Host $host;
+		}
 	}
-}
