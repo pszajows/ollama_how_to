@@ -8,7 +8,7 @@ Ollama (https://ollama.ai/) is a package allowing for quick and easy experiments
 
 The list of models available in Ollama include Llama 2, Mistral, Mixtral, Phi, Orca 2, Llava and many others. The complete list of available models can be found here: https://ollama.ai/library
 
-## How to install Ollama in WSL?
+## How to install Ollama?
 
 At the moment (January 2024) Ollama is available only for macOS and Linux. To use it in Windows it is necessary to install WSL and one of available Linux distributions. Examples refering to WSL given in this repository are tested in Ubuntu 22.04.3 LTS.
 
@@ -30,6 +30,7 @@ In different environments it is related to different behaviour:
 
 Example setup for running Ollama locally:
 > OLLAMA_HOST=0.0.0.0 
+
 > OLLAMA_ORIGINS=*
 
 
