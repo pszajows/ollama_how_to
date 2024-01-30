@@ -77,4 +77,22 @@ is also possible to stream response as a series of JSON objects. For details see
 
 ## [optional] How to route trafic to Ollama server from a different port?
 
+Doing experiments with Ollama in December 2023 I was not able to find an easy way to expose the port of Ollama 
+server to other hosts to simulate a setup, in which Ollama runs on a separate host or in a container. A quick 
+and dirty solution allowing for achieving such setup is to use *nginx* web server (https://nginx.org/en/). 
 
+To install  it in Raspberry Pi OS I used the following command:
+> sudo apt install nginx
+
+Next I modified the file */etc/nginx/sites-available/default* - the server section after modification follows:
+
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        server_name _;
+
+        location / {
+                proxy_pass http://127.0.0.1:11434;
+                proxy_set_header Host $host;
+	}
+}
