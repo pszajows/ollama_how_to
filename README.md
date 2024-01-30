@@ -30,7 +30,27 @@ In different environments it is related to different behaviour:
 
 Example setup for running Ollama locally:
 > OLLAMA_HOST=0.0.0.0 
-
 > OLLAMA_ORIGINS=*
 
+To start Ollama server in WSL you can use the shell script *start_ollama.sh* from this repository. 
+Make its copy in your home folder, change its attributes to make it runnable:
+> chmod 777 start_ollama.sh
+and start it in background:
+> ./start_ollama.sh &
 
+## How to download a model to Ollama?
+
+Ollama has its own model cache, which is populated automatically when a specific model version is invoked (see below).
+Sometimes it is convenient to trigger populating the cache manually, e.g. when you want to download several models
+for the future use running a batch. In order to do it, you can use *ollama pull* command with a name 
+or a name and a tag of the model you want to use, for instance:
+> ollama pull starcoder
+
+For the comlete list of models see: https://ollama.ai/library
+
+Each model listed there has its own tag list, with all available version (in different sizes and for different putposes), 
+for instance: https://ollama.ai/library/llama2/tags
+
+## How to use Ollama locally from CLI?
+
+In order to use Ollama locally it is necessary to 
