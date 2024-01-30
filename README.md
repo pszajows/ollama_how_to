@@ -75,6 +75,7 @@ Interesting details:
 - It is possible to calculate embeddings from the models used. There is another endpoint in the API for that. For details see: https://github.com/ollama/ollama/blob/main/docs/api.md#generate-embeddings
 - It is possible to bind subsequent calls into chat conversation with the model using *context* parameter. It 
 is also possible to stream response as a series of JSON objects. For details see: https://github.com/ollama/ollama/blob/main/docs/api.md#parameters
+- It is possible to import own models to be used with Ollama. For details see: https://github.com/ollama/ollama/blob/main/docs/import.md
 
 ## [optional] How to route trafic to Ollama server from a different port?
 
