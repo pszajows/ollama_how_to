@@ -53,4 +53,26 @@ for instance: https://ollama.ai/library/llama2/tags
 
 ## How to use Ollama locally from CLI?
 
-In order to use Ollama locally it is necessary to 
+In order to use Ollama locally it is necessary to use *ollama run* command with a name
+or a name and a tag of the model you want to use, e.g.: 
+> ollama run dolphin-phi:latest
+
+After short time you will be able to write prompts for the selected model in the console. To exit ollama type:
+> /bye
+
+## How to set up Ollama to be used with API?
+
+By default Ollama server runs on port 11434. It may be called locally or it can be exposed to a port open 
+for calls from other hosts. Example Python code for calling Ollama server locally can be found 
+in the file *experiment.py* in this repository. 
+
+For complete documentation of the API see: https://github.com/ollama/ollama/blob/main/docs/api.md
+
+Interesting details:
+- It is possible to calculate embeddings from the models used. There is another endpoint in the API for that. For details see: https://github.com/ollama/ollama/blob/main/docs/api.md#generate-embeddings
+- It is possible to bind subsequent calls into chat conversation with the model using *context* parameter. It 
+is also possible to stream response as a series of JSON objects. For details see: https://github.com/ollama/ollama/blob/main/docs/api.md#parameters
+
+## [optional] How to route trafic to Ollama server from a different port?
+
+
