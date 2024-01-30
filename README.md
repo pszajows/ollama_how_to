@@ -96,3 +96,5 @@ Next I modified the file */etc/nginx/sites-available/default* - the server secti
                 	proxy_set_header Host $host;
 		}
 	}
+
+After such modification it was possible to call Ollama server from other host using port 80. 
